@@ -17,6 +17,7 @@ class Contact
 		this.email=email;
 		this.g=g;
 	}
+	
 }
 
 class TreeMapExample {
