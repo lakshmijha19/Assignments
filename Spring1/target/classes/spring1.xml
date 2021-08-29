@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="customer" class="com.lakshmi.Spring1.Customer">
+<!--  		<property name="customerID" value="1003"></property>
+		<property name="customerName" value="Lakshmi"></property>
+		<property name="customerContact" value="7600594115"></property>
+		<property name="customerAddress" ref="customerAddress"></property>  -->
+		
+		<constructor-arg value="1003" type="int"></constructor-arg>
+		<constructor-arg value="Lakshmi Jha" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="7600594115" type="long"></constructor-arg>
+		<constructor-arg ref="customerAddress" ></constructor-arg>
+</bean>
+
+<bean id="customerAddress" class="com.lakshmi.Spring1.Address">
+	<property name="street" value="Chala"></property>
+	<property name="city" value="Vapi"></property>
+	<property name="state" value="Gujarat"></property>
+	<property name="zip" value="396191"></property>
+	<property name="country" value="India"></property>
+</bean>
+
+</beans>

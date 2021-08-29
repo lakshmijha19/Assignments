@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.lakshmi.Spring9.Bean"></bean>
+
+<bean class="com.lakshmi.Spring9.BeanMethods" init-method="customInit" destroy-method="customDestroy"></bean>
+
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+<bean class="com.lakshmi.Spring9.BeanAnnotations"></bean>
+
+</beans>

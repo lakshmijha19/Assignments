@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="question" class="com.lakshmi.Spring2.Question">
+		<property name="questionID" value="1"></property>
+		<property name="question" value="Mention Spring Features?"></property>
+		
+<!--  		<property name="answers">
+			<list>
+					<value>Dependency Injection</value>
+					<value>Spring creates objects using DI</value>
+			</list>
+		</property>    -->
+		
+<!--  	<property name="answers">
+			<set>
+					<value>Plain Old Java Object</value>
+					<value>Spring Framework enables POJO Programming, enables continuous integration and testability.</value>
+			</set>
+		</property>		-->	
+		
+		<property name="answers">
+			<map>
+			<entry key="1">	
+				<value>Containers</value>  
+			</entry>
+			<entry key="2">	
+				<value>Spring Framework creates and manages the life cycle and configuration of the application objects.</value>
+			</entry>	
+			</map>
+		</property>	
+</bean>
+
+</beans>
