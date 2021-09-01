@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Build a Survey Form using HTML and CSS
+	</title>
+
+	<style>
+
+	
+		body {
+			background-color: #3F2765;
+			font-family: Bahnschrift SemiBold;
+			text-align: center;
+		}
+
+		form {
+			background-color: #4D317B;
+			color:#E6E6FA;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			border-radius: 25px;
+			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+			background-color:#4D317B;
+		}
+	
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"],
+		.form-control select {
+			display: inline-block;
+			width: auto;
+			background-color:#714CAC;
+		}
+
+	
+		button {
+			background-color: #714CAC;
+			border: 1px solid #4D317B;
+			border-radius: 30px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 50%;
+			transition-duration: 0.4s;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			padding: 15px 32px;
+		}
+		button:hover{  background-color: #E6E6FA;
+  color: #3F2765; }
+		
+		h1 { color: #714CAC;}
+	</style>
+</head>
+
+<body>
+	<h1> Good Vibes Survey Form</h1>
+
+	
+	<form id="form">
+
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			
+			<input type="text"
+				id="name"
+				placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+		
+			<input type="email"
+				id="email"
+				placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			<label for="scale" id="label-scale">
+				On a scale of 1-10, how good was it?
+			</label>
+
+			
+			<input type="text"
+				id="scale"
+				placeholder="Enter a number between 1 to 10" />
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Where did it happen?
+			</label>
+			
+		
+			<select name="role" id="role">
+				<option value="home">At home</option>
+				<option value="commute">On my commute</option>
+				<option value="work">
+					At work
+				</option>
+				<option value="street">On the street</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				At what time of day did it happen?
+			</label>
+
+			
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Morning</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">Afternoon</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Evening</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>What emotions did you experience?
+				<small>(Check all that apply)</small>
+			</label>
+			
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">Excited</input></label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">Humbled</input></label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">Elated</input></label>
+			<label for="inp-4">
+				<input type="checkbox"
+					name="inp">Loved</input></label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">Enthusiastic</input></label>
+		</div>
+
+		<div class="form-control">
+			<label for="comment">
+				Please describe your positive experience.
+			</label>
+
+			<textarea name="comment" id="comment"
+				placeholder="Enter your experience here">
+			</textarea>
+		</div>
+
+		
+		<center><button type="submit" value="submit">
+			Submit
+		</button></center>
+	</form>
+</body>
+
+</html>
