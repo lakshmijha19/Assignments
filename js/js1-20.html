@@ -1,0 +1,47 @@
+<html>
+    <body>
+       
+        <form name="form" onsubmit="return false">
+            Name: <input  type="texr"><br>
+            Email:<input  type="texr"><br>
+            <b>Toppings:</b><br>
+            ExtraCheese<input value="ExtraCheese" type="checkbox" name="toppings">
+            Pepperoni<input value="Pepperoni" type="checkbox" name="toppings">
+            Olives<input  value="Olives" type="checkbox" name="toppings">
+            Pepper<input value="Pepper" type="checkbox"name="toppings">
+            Bacon<input value="Bacon" type="checkbox"name="toppings">
+            Tomatoes<input value="Tomatoes" type="checkbox"name="toppings">
+            Mushrooms<input value="Mushrooms" type="checkbox"name="toppings">
+            <br>
+            <b>How do you want to get your pizza delivered </b>
+            Delivery<input name="delivery" value="yes" type="radio">
+            Pickup<input name="delivery" value="No" type="radio">
+            <br>
+            Tips<input type="number" min="0" max="100"><br>
+            <input type="button" value="submit" onclick="fun()">
+            <p name="para">""</p>
+        </form>
+        <script >
+            function fun(){
+
+                let para=document.getElementsByName("para");
+                let s=""
+                
+                let x= document.forms.form.toppings;
+                for(let i=0;i<x.length;i++){
+                    if(x[i].checked){
+                        s+=x[i].value+"\n";
+                        
+                        // document.write(x[i].value);
+                    }
+                }
+                para[0].innerText=s;
+                
+            }
+            
+            
+
+    </script>
+        
+    </body>
+</html>
